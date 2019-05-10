@@ -15,4 +15,9 @@ public class SampleXd : MonoBehaviour
     {
         
     }
+
+    private void OnMouseEnter()
+    {
+        Debug.Log(100);
+    }
 }
