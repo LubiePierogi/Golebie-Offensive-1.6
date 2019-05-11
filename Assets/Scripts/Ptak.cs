@@ -19,6 +19,8 @@ public class Ptak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Board.instance.nieee)
+            return;
         if (Hunt())
             Debug.Log("poluje xd");
         else

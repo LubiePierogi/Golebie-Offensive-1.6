@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4740302789536964067}
   - component: {fileID: 4740302789536964066}
   m_Layer: 0
-  m_Name: BoardFgfg
+  m_Name: Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +92,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1baca5a6a9be1ff42842a650f89e8cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sp: {fileID: 0}
+  c: {fileID: 0}
+  sciany: {fileID: 0}
+  stan: {fileID: 11400000, guid: fcd1cd30a343e1a47af93c61b91bab51, type: 2}
+  ptakPrefab: {fileID: 208232579080913642, guid: 4200353d3a2a8384886d00c626a8f893,
+    type: 3}
+  purpleSeedPrefab: {fileID: 5004387791544581368, guid: 072bd49a022b41a42bdf901aedeab6eb,
+    type: 3}
+  greenSeedPrefab: {fileID: 1002412638771141121, guid: 0876f329687d05545a05c59b6e9febe3,
+    type: 3}
+  nieee: 0
+  seeds: 4

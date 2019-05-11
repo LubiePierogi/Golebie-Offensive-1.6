@@ -9,16 +9,6 @@ public class Ziarenko : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        switch (type)
-        {
-            case 0:
-                break;
-            case 1: default:
-                sr.sprite.
-           */
-        //}
     }
 
     // Update is called once per frame

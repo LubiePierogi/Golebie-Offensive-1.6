@@ -6,14 +6,9 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Stan", menuName = "gra/stan", order = 1)]
 public class Stan : ScriptableObject
 {
-    /// <summary>
-    /// Board which we play now on.
-    /// </summary>
-    /// Can be null xd
-    public BoardFgfg board = null;
+    public Level[] levels;
 
-    public Vector2[] ptaks = null;
-    public Vector2[] purpleSeeds = null;
+    public int lvlNumber; // -1 to random xd
 
     public void PlayButton()
     {
@@ -27,43 +22,18 @@ public class Stan : ScriptableObject
         Application.Quit();
     }
 
-    
-    public void ButtonLevel(int levelNumer)
+
+    public void ButtonLevel(int x)
     {
-        switch (levelNumer)
-        {
-            case 1:
-                purpleSeeds = new Vector2[]
-                {
-                    new Vector2(3f, 4f),
-                    new Vector2(4f, 3.2f),
-                    new Vector2(5f, -5f),
-                    new Vector2(6f, -4f),
-                };
-                ptaks = new Vector2[]
-                {
-                    new Vector2(5f, 8f),
-                    new Vector2(-4.35f, 0f),
-                };
-                break;
-            case 2:
-                Debug.Log("Wybieranie levelu 2 xd");
-                break;
-            case 3:
-                Debug.Log("Wybieranie levelu 3 xd");
-                break;
-            default:
-                Debug.Log("Nie ma takiego levelu xd\n nic nie robię xd");
-                return;
-        }
-        ZacznijXd();
+        lvlNumber = x;
+        Zacznij();
     }
     public void ButtonRandom()
     {
-        Debug.Log("ok, to mam zrobić losowy level xd");
-        ZacznijXd();
+        lvlNumber = -1;
+        Zacznij();
     }
-    private void ZacznijXd()
+    public void Zacznij()
     {
         SceneManager.LoadScene("Golebie");
     }

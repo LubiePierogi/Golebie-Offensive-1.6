@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SeedPlansza : MonoBehaviour
 {
-    public Camera c = null;
-    public BoardFgfg fg = null;
-    public GameObject putSeedPrefab = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +18,14 @@ public class SeedPlansza : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (c != null)
+        if (Board.instance.c != null)
         {
-            if (fg.seeds > 0 && putSeedPrefab != null)
+            if (Board.instance.seeds > 0 && Board.instance.greenSeedPrefab != null)
             {
-                Vector3 q = c.ScreenToWorldPoint(Input.mousePosition); // screen to world
+                Vector3 q = Board.instance.c.ScreenToWorldPoint(Input.mousePosition); // screen to world
                 q.Scale(Vector3.up + Vector3.right);
-                --fg.seeds;
-                GameObject newSeed = Instantiate(putSeedPrefab);
+                --Board.instance.seeds;
+                GameObject newSeed = Instantiate(Board.instance.greenSeedPrefab);
                 newSeed.transform.position = q;
             }
 

@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour
     {
         //Screen.width;
         float q = (float)Screen.width / Screen.height;
-        Debug.Log(q);
+        //Debug.Log(q);
         if (q < Max_W)
         {
             GetComponent<Camera>().orthographicSize = 5f * Max_W / q;

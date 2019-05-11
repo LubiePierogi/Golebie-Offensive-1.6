@@ -9,10 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc541cd3213623c41ab11c00cb47ac2a, type: 3}
-  m_Name: Stan
+  m_Script: {fileID: 11500000, guid: f7a20d13535d06647a4f0970b36e425d, type: 3}
+  m_Name: Level1
   m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 11400000, guid: 3a8f82b335758bf49abe29d9606fe8f1, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  ptaks:
+  - {x: 2, y: 3}
+  - {x: 1, y: 4}
+  - {x: -5, y: -4}
+  ziarenkos:
+  - {x: 3, y: 3}
+  - {x: 7, y: -1.25}
+  - {x: 1, y: 4}
+  - {x: 3, y: 1.2}
+  time: 12
+  seedsInPlecak: 5
