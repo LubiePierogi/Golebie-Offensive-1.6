@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   ptaks:
-  - {x: 2, y: 3}
-  - {x: 1, y: 4}
-  - {x: -5, y: -4}
+  - {x: 1.6, y: 3}
+  - {x: 0.9, y: 1.95}
+  - {x: -5, y: -2.35}
   ziarenkos:
-  - {x: 3, y: 3}
+  - {x: -5.6, y: 3}
   - {x: 7, y: -1.25}
-  - {x: 1, y: 4}
+  - {x: 1.2, y: 2.25}
   - {x: 3, y: 1.2}
-  time: 12
+  time: 8
   seedsInPlecak: 5

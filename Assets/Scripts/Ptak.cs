@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class Ptak : MonoBehaviour
 {
     public bool hunting = true;
-    public float walkSpeed = 1.5f;
+    public float walkSpeed = 0.9f;
     public float spacerSpeedMult = 0.4f;
-    public float spacerRotateMult = 75f;
+    public float spacerRotateMult = 90f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +19,20 @@ public class Ptak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Board.instance.nieee)
-            return;
-        if (Hunt())
-            Debug.Log("poluje xd");
-        else
+        if (!Fgfg() && !Hunt())
             Spacerekxd();
+    }
+    
+    private bool Fgfg()
+    {
+        if (Board.instance.cosie != Board.GRA)
+        {
+            var rb = GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            return true;
+        }
+        return false;
     }
 
     // Returns true if there are any seeds.
@@ -32,20 +40,17 @@ public class Ptak : MonoBehaviour
     {
         float odl = float.PositiveInfinity;
         Ziarenko najblizej = null;
-        List<GameObject> rootObjects = new List<GameObject>();
-        Scene scene = SceneManager.GetActiveScene();
-        scene.GetRootGameObjects(rootObjects);
 
-        if (rootObjects.Any())
+        if (Board.instance.seedsAll.Any())
         {
 
             // iterate root objects and do something
-            for (int i = 0; i < rootObjects.Count; ++i)
+            for (int i = 0; i < Board.instance.seedsAll.Count; ++i)
             {
-                Ziarenko z = rootObjects[i].GetComponent<Ziarenko>(); ;
+                Ziarenko z = Board.instance.seedsAll[i].GetComponent<Ziarenko>(); ;
                 if (z != null)
                 {
-                    float o = (transform.position - rootObjects[i].transform.position).sqrMagnitude;
+                    float o = (transform.position - Board.instance.seedsAll[i].transform.position).sqrMagnitude;
                     if (o < odl)
                     {
                         odl = o;
@@ -82,7 +87,7 @@ public class Ptak : MonoBehaviour
     }
     private void Spacerekxd()
     {
-        Debug.Log("jabłeczka xd");
+        //Debug.Log("jabłeczka xd");
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.angularVelocity = spacerRotateMult * (2 * Random.value - 1);
         Debug.Log(rb.angularVelocity);

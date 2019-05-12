@@ -18,7 +18,7 @@ public class SeedPlansza : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Board.instance.c != null)
+        if (Board.instance.cosie == Board.GRA && Board.instance.c != null)
         {
             if (Board.instance.seeds > 0 && Board.instance.greenSeedPrefab != null)
             {

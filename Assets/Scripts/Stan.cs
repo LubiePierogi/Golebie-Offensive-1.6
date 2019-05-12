@@ -33,6 +33,38 @@ public class Stan : ScriptableObject
         lvlNumber = -1;
         Zacznij();
     }
+    public void ButtonUnpause()
+    {
+        if(Board.instance != null)
+        {
+            if (Board.instance.cosie == Board.PAUZA)
+            {
+                if (Board.instance.timeWait > 0f)
+                    Board.instance.cosie = Board.CZEKANKO;
+                else
+                    Board.instance.cosie = Board.GRA;
+                Destroy(Board.instance.okno);
+                Board.instance.okno = null;
+            }
+        }
+    }
+
+    public void ButtonPause()
+    {
+        if (Board.instance != null)
+        {
+            if (Board.instance.cosie == Board.GRA || Board.instance.cosie == Board.CZEKANKO)
+            {
+                Board.instance.cosie = Board.PAUZA;
+                Board.instance.okno = Instantiate(Board.instance.pausePanelPrefab, Board.instance.canvas.transform);
+            }
+        }
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void Zacznij()
     {
         SceneManager.LoadScene("Golebie");

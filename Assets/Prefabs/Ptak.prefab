@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 208232579080913641}
   - component: {fileID: 208232579080913640}
-  - component: {fileID: 208232579080913643}
   - component: {fileID: 208232579080913639}
   - component: {fileID: 4970969485699603300}
+  - component: {fileID: 8200529825065562833}
   m_Layer: 0
   m_Name: Ptak
   m_TagString: Untagged
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8977c58f42d09ea4e97ad6706af29470, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15dcd8f203398104ebe4301210fe125e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,22 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &208232579080913643
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208232579080913642}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.64
 --- !u!114 &208232579080913639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunting: 1
   walkSpeed: 1.5
+  spacerSpeedMult: 0.4
+  spacerRotateMult: 75
 --- !u!50 &4970969485699603300
 Rigidbody2D:
   serializedVersion: 4
@@ -133,3 +119,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &8200529825065562833
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208232579080913642}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 0.5}
+  m_EdgeRadius: 0

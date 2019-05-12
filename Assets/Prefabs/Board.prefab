@@ -102,5 +102,17 @@ MonoBehaviour:
     type: 3}
   greenSeedPrefab: {fileID: 1002412638771141121, guid: 0876f329687d05545a05c59b6e9febe3,
     type: 3}
-  nieee: 0
+  pausePanelPrefab: {fileID: 4461050532399979403, guid: 9578ff918ce2f3440a0803557fc5b112,
+    type: 3}
+  gameOverPanelPrefab: {fileID: 8876778066956771100, guid: df7c5c7427f7bb949a71306dc0daa838,
+    type: 3}
+  cosie: 0
+  przegranko: 0
   seeds: 4
+  timeLeft: 1
+  timeToGameOver: 1
+  purpleSeeds: []
+  seedsAll: []
+  ziarnaText: {fileID: 0}
+  czasText: {fileID: 0}
+  okno: {fileID: 0}

@@ -9,6 +9,20 @@ public class Ziarenko : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Board.instance.seedsAll.Add(this);
+        if (type > 0)
+        {
+            Board.instance.purpleSeeds.Add(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Board.instance.seedsAll.Remove(this);
+        if (type > 0)
+        {
+            Board.instance.purpleSeeds.Remove(this);
+        }
     }
 
     // Update is called once per frame
