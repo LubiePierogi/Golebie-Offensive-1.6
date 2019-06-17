@@ -5,3 +5,5 @@ No taka bardzo fajna gierka zrobiona w Unity z bardzo ładną graficzką i w og�
 Trudne jak Dark Souls prawie.
 
 Nazwa jest przypadkowa.
+
+Jest to gra z Gryf Game Jamu 2019 :)
